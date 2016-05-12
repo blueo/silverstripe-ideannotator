@@ -32,5 +32,6 @@
     "extra": {
         "installer-name": "ideannotator"
     },
+    "minimum-stability" : "alpha",
     "target-dir": "ideannotator"
 }
