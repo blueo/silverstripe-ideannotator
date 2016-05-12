@@ -27,10 +27,10 @@ class ControllerAnnotatorTest extends SapphireTest
     {
         parent::setUp();
         Config::inst()->update('DataObjectAnnotator', 'enabled', true);
-        Config::inst()->update('DataObjectAnnotator', 'enabled_modules', array('ideannotator'));
+        Config::inst()->update('DataObjectAnnotator', 'enabled_modules', ['ideannotator']);
 
         Config::inst()->update('AnnotatorPageTest_Controller', 'extensions',
-            array('AnnotatorPageTest_Extension')
+            ['AnnotatorPageTest_Extension']
         );
 
         $this->annotator = Injector::inst()->get('MockDataObjectAnnotator');

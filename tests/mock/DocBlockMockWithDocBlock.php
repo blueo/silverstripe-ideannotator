@@ -9,9 +9,9 @@ class DocBlockMockWithDocBlock extends DataObject implements TestOnly
     /**
      * @var array
      */
-    private static $db = array(
+    private static $db = [
         'Title'    => 'Varchar(255)'
-    );
+    ];
 }
 
 /**
@@ -22,9 +22,9 @@ class OtherDocBlockMockWithDocBlock extends DataObject implements TestOnly
     /**
      * @var array
      */
-    private static $db = array(
+    private static $db = [
         'Name'    => 'Varchar(255)'
-    );
+    ];
 }
 
 /**
@@ -42,15 +42,15 @@ class DataObjectWithOldStyleTagMarkers extends DataObject implements TestOnly
     /**
      * @var array
      */
-    private static $db = array(
+    private static $db = [
         'Street' => 'Varchar(255)',
         'Nr'     => 'Int'
-    );
+    ];
 
     /**
      * @var array
      */
-    private static $has_one = array(
+    private static $has_one = [
         'Page'    => 'Page'
-    );
+    ];
 }

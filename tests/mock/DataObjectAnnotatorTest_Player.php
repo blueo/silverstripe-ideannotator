@@ -5,17 +5,17 @@
  */
 class DataObjectAnnotatorTest_Player extends Member implements TestOnly
 {
-    private static $db = array(
+    private static $db = [
         'IsRetired'   => 'Boolean',
         'ShirtNumber' => 'Varchar',
-    );
+    ];
 
-    private static $has_one = array(
+    private static $has_one = [
         'FavouriteTeam' => 'DataObjectAnnotatorTest_Team',
-    );
+    ];
 
-    private static $belongs_many_many = array(
+    private static $belongs_many_many = [
         'TeamPlayer'  => 'DataObjectAnnotatorTest_Team.Team',
         'TeamReserve' => 'DataObjectAnnotatorTest_Team.Reserve'
-    );
+    ];
 }

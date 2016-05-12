@@ -126,11 +126,11 @@ class DocBlockGenerator
      */
     public function removeExistingSupportedTags($docBlock)
     {
-        $replacements = array(
+        $replacements = [
             "/ \* @property ([\s\S]*?)\n/",
             "/ \* @method ([\s\S]*?)\n/",
             "/ \* @mixin ([\s\S]*?)\n/"
-        );
+        ];
 
         return (string)preg_replace($replacements, '', $docBlock);
     }
@@ -157,7 +157,7 @@ class DocBlockGenerator
          * Then remove the start and end tag seperate, if it still exists in case a developer has merged
          * the generated docblocks with existing ones.
          */
-        $docBlock = preg_replace(array("/ \* $startTag\n/", "/ \* $endTag\n/"), '', $docBlock);
+        $docBlock = preg_replace(["/ \* $startTag\n/", "/ \* $endTag\n/"], '', $docBlock);
 
         return $docBlock;
     }

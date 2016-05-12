@@ -38,7 +38,7 @@ class DataObjectAnnotator extends Object
      * Enable modules that are allowed to have generated docblocks for DataObjects and DataExtensions
      * @var array
      */
-    private static $enabled_modules = array('mysite');
+    private static $enabled_modules = ['mysite'];
 
     /**
      * @var AnnotatePermissionChecker
@@ -48,7 +48,7 @@ class DataObjectAnnotator extends Object
     /**
      * @var array
      */
-    private $annotatableClasses = array();
+    private $annotatableClasses = [];
 
     /**
      * DataObjectAnnotator constructor.
@@ -67,6 +67,7 @@ class DataObjectAnnotator extends Object
 
     /**
      * Get all annotatable classes from enabled modules
+     * @param $supportedParentClass
      */
     protected function setEnabledClasses($supportedParentClass)
     {
@@ -85,7 +86,7 @@ class DataObjectAnnotator extends Object
      */
     public function getClassesForModule($moduleName)
     {
-        $classes = array();
+        $classes = [];
 
         foreach ($this->annotatableClasses as $class => $filePath) {
             $classInfo = new AnnotateClassInfo($class);

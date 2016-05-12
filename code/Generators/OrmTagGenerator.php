@@ -13,7 +13,7 @@ class OrmTagGenerator extends AbstractTagGenerator
      * @var array
      * Available properties to generate docblocks for.
      */
-    protected static $propertyTypes = array(
+    protected static $propertyTypes = [
         'Owner',
         'DB',
         'HasOne',
@@ -22,7 +22,7 @@ class OrmTagGenerator extends AbstractTagGenerator
         'ManyMany',
         'BelongsManyMany',
         'Extensions',
-    );
+    ];
 
     /**
      * Default tagname is will be @string .
@@ -31,12 +31,12 @@ class OrmTagGenerator extends AbstractTagGenerator
      * @see generateDBTags();
      * @var array
      */
-    protected static $dbfield_tagnames = array(
+    protected static $dbfield_tagnames = [
         'Int'     => 'int',
         'Boolean' => 'boolean',
         'Float'   => 'float',
         'Decimal' => 'float'
-    );
+    ];
 
     /**
      * Generates all ORM Tags

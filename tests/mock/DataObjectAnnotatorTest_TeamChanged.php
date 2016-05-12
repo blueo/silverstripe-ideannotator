@@ -22,32 +22,30 @@
 class DataObjectAnnotatorTest_TeamChanged extends DataObject implements TestOnly
 {
 
-    private static $db = array(
+    private static $db = [
         'Title' => 'Varchar',
         'Price' => 'Currency'
-    );
+    ];
 
-    private static $has_one = array(
+    private static $has_one = [
         "Captain"            => 'DataObjectAnnotatorTest_Player',
         'HasOneRelationship' => 'DataObjectAnnotatorTest_Player',
-    );
+    ];
 
-    private static $has_many = array(
+    private static $has_many = [
         'SubTeams' => 'DataObjectAnnotatorTest_SubTeam',
         'Comments' => 'DataObjectAnnotatorTest_TeamComment'
-    );
+    ];
 
-    private static $many_many = array(
+    private static $many_many = [
         'Players'           => 'DataObjectAnnotatorTest_Player',
         'SecondarySubTeams' => 'DataObjectAnnotatorTest_SubTeam',
-    );
+    ];
 
     public function SecondarySubTeams()
     {
 
     }
-
 }
 
-Config::inst()->update('DataObjectAnnotatorTest_TeamChanged', 'extensions',
-    array('DataObjectAnnotatorTest_Team_Extension'));
+Config::inst()->update('DataObjectAnnotatorTest_TeamChanged', 'extensions', ['DataObjectAnnotatorTest_Team_Extension']);

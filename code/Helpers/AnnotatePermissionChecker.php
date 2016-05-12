@@ -16,12 +16,12 @@ class AnnotatePermissionChecker
      * We list the core classes, but in fact only it's subclasses are supported
      * @see AnnotatePermissionChecker::classNameIsSupported();
      */
-    protected $supportedParentClasses = array(
+    protected $supportedParentClasses = [
         'DataObject',
         'DataExtension',
         'Controller',
         'Extension'
-    );
+    ];
 
     /**
      * @return bool

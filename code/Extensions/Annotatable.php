@@ -29,7 +29,7 @@ class Annotatable extends Extension
      * This prevents that an Extension is ran twice on dev/build
      * @var array
      */
-    public static $annotated_extensions = array();
+    public static $annotated_extensions = [];
 
     /**
      * Annotatable setup.
@@ -50,7 +50,7 @@ class Annotatable extends Extension
 
         $skipAnnotation = $this->owner->getRequest()->getVar('skipannotation');
         $envIsAllowed   = $this->permissionChecker->environmentIsAllowed();
-        
+
         if ($skipAnnotation === null && $envIsAllowed) {
 
             $this->displayMessage(' Generating class docblocks');

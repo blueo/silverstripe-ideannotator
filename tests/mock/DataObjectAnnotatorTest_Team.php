@@ -10,27 +10,27 @@
 class DataObjectAnnotatorTest_Team extends DataObject implements TestOnly
 {
 
-    private static $db = array(
+    private static $db = [
         'Title'      => 'Varchar',
         'VisitCount' => 'Int',
         'Price'      => 'Currency'
-    );
+    ];
 
-    private static $has_one = array(
+    private static $has_one = [
         "Captain"            => 'DataObjectAnnotatorTest_Player',
         'HasOneRelationship' => 'DataObjectAnnotatorTest_Player',
-    );
+    ];
 
-    private static $has_many = array(
+    private static $has_many = [
         'SubTeams' => 'DataObjectAnnotatorTest_SubTeam',
         'Comments' => 'DataObjectAnnotatorTest_TeamComment'
-    );
+    ];
 
-    private static $many_many = array(
+    private static $many_many = [
         'Players'           => 'DataObjectAnnotatorTest_Player.Players',
         'Reserves'          => 'DataObjectAnnotatorTest_Player.Reserves',
         'SecondarySubTeams' => 'DataObjectAnnotatorTest_SubTeam',
-    );
+    ];
 
     public function SecondarySubTeams()
     {
@@ -39,4 +39,4 @@ class DataObjectAnnotatorTest_Team extends DataObject implements TestOnly
 
 }
 
-Config::inst()->update('DataObjectAnnotatorTest_Team', 'extensions', array('DataObjectAnnotatorTest_Team_Extension'));
+Config::inst()->update('DataObjectAnnotatorTest_Team', 'extensions', ['DataObjectAnnotatorTest_Team_Extension']);

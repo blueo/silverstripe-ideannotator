@@ -26,7 +26,7 @@ class AnnotateChangedDBSpecsTest extends SapphireTest
         parent::setUp();
         Config::inst()->update('Director', 'environment_type', 'dev');
         Config::inst()->update('DataObjectAnnotator', 'enabled', true);
-        Config::inst()->update('DataObjectAnnotator', 'enabled_modules', array('ideannotator'));
+        Config::inst()->update('DataObjectAnnotator', 'enabled_modules', ['ideannotator']);
 
         $this->annotator = Injector::inst()->get('MockDataObjectAnnotator');
     }
@@ -50,7 +50,7 @@ class AnnotateChangedDBSpecsTest extends SapphireTest
     public function testManuallyCommentedTagsWillNotBeRemoved()
     {
 
-        Config::inst()->update('DataObjectAnnotatorTest_TeamChanged', 'extensions', array('DataObjectAnnotatorTest_Team_Extension'));
+        Config::inst()->update('DataObjectAnnotatorTest_TeamChanged', 'extensions', ['DataObjectAnnotatorTest_Team_Extension']);
 
         $classInfo = new AnnotateClassInfo('DataObjectAnnotatorTest_TeamChanged');
         $filePath  = $classInfo->getClassFilePath();

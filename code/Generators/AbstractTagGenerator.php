@@ -19,7 +19,7 @@ abstract class AbstractTagGenerator
      * The existing tags of the class we are working with
      * @var phpDocumentor\Reflection\DocBlock\Tag[]
      */
-    protected $existingTags = array();
+    protected $existingTags = [];
 
     /**
      * @var ReflectionClass
@@ -31,7 +31,7 @@ abstract class AbstractTagGenerator
      * @see $this->getSupportedTagTypes();
      * @var phpDocumentor\Reflection\DocBlock\Tag[]
      */
-    protected $tags = array();
+    protected $tags = [];
 
     /**
      * All classes that subclass Object
@@ -97,12 +97,12 @@ abstract class AbstractTagGenerator
      */
     public function getSupportedTagTypes()
     {
-        return array(
-            'properties'=> array(),
-            'methods'   => array(),
-            'mixins'    => array(),
-            'other'     => array()
-        );
+        return [
+            'properties'=> [],
+            'methods'   => [],
+            'mixins'    => [],
+            'other'     => []
+        ];
     }
 
     /**
