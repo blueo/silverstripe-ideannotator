@@ -33,10 +33,8 @@ class OrmTagGenerator extends AbstractTagGenerator
      */
     protected static $dbfield_tagnames = array(
         'Int'     => 'int',
-        'DBInt'   => 'int',
         'Boolean' => 'boolean',
         'Float'   => 'float',
-        'DBFloat' => 'float',
         'Decimal' => 'float'
     );
 
@@ -73,11 +71,9 @@ class OrmTagGenerator extends AbstractTagGenerator
         $fieldObj = Object::create_from_string($dbFieldType, 'DummyName');
 
         foreach (self::$dbfield_tagnames as $dbClass => $tagName) {
-            if (class_exists($dbClass)) {
-                $obj = Object::create_from_string($dbClass);
-                if ($fieldObj instanceof $obj) {
-                    return $tagName;
-                }
+            $inst = Injector::inst()->get($dbClass);
+            if ($fieldObj instanceof $inst) {
+                return $tagName;
             }
         }
         return 'string';
