@@ -22,11 +22,11 @@
         }
     ],
     "require": {
-        "silverstripe/framework": ">=4.0.0",
+        "silverstripe/framework": "dev-master",
         "phpdocumentor/reflection-docblock": "^2.0.4"
     },
     "require-dev": {
-        "silverstripe/cms": ">=4.0.0",
+        "silverstripe/cms": "dev-master",
         "phpunit/PHPUnit": "~3.7@stable"
     },
     "extra": {
