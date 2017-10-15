@@ -2,11 +2,6 @@
 
 namespace SilverLeague\IDEAnnotator\Tests;
 
-// Why is this required?
-// @todo get it to work properly
-require_once(BASE_PATH . '/mysite/code/Page.php');
-require_once(BASE_PATH . '/mysite/code/PageController.php');
-
 use Page;
 use PageController;
 use SilverStripe\Core\Extension;
