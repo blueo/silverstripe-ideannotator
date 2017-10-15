@@ -23,10 +23,6 @@ When enabled IdeAnnotator generates the docblocks on dev/build for mysite only.
 
 You can add extra module folders with the following config setting :
 
-```php
-Config::modify()->set('SilverLeague\IDEAnnotator\DataObjectAnnotator', 'enabled_modules', array('mysite', 'otherfolderinsiteroot'));
-```
-or
 ```
 yml
 ---

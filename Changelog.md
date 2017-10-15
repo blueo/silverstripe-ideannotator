@@ -33,3 +33,13 @@
 
 # 3.0 beta-1
 * Support for SilverStripe 4
+
+# 3.0
+* Supporting (only) SilverStripe 4
+* Code updated to work with namespaces
+* Namespaced code
+* Only act on root modules
+* For todo's, see issues
+* Improved inline docs
+* Updated documentation
+* 
